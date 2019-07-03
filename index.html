@@ -66,11 +66,11 @@ function createMap(){
     var dark  = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL'
     }).addTo(map);
-    var thunderforest = L.tileLayer.provider('Thunderforest.Landscape', {apikey:'ecbac3fd50f64532877a7f89024930a9'}).addTo(map);
+    var thunderforest = L.tileLayer.provider('Thunderforest.MobileAtlas', {apikey:'ecbac3fd50f64532877a7f89024930a9'}).addTo(map);
     //add selection menu for OSM tilelayers
     controlLayers.addBaseLayer(dark, "Dark OSM Map tiles");
     controlLayers.addBaseLayer(light, "Light OSM Map tiles");
-    controlLayer.addBaseLayer(thunderforest, "Thunderforest Map tiles");
+    controlLayers.addBaseLayer(thunderforest, "Thunderforest Map tiles");
 
     //call getData function
     getData(map);
